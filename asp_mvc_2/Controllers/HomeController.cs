@@ -16,6 +16,7 @@ namespace asp_mvc_2.Controllers
         [Authorize]
         public ActionResult EditProfile()
         {
+
             string loginName = User.Identity.Name;
             UserManager UM = new UserManager();
             UserProfileView UPV = UM.GetUserProfile(UM.GetUserID(loginName));
